@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+	<head>
+		<title>welcome to the jellyfish rave</title>
+
+		<!-- credits:
+			the original peanut butter jelly time was created by Ryan Gancenia Etrata and Kevin Flynn. https://knowyourmeme.com/memes/peanut-butter-jelly-time
+
+			song: Buckwheat Boyz
+			wallpaper: https://wallpapercave.com/w/wp2046366
+			gif editor: ezgif.com
+
+			image sources:
+				https://giphy.com/gifs/jellyfish-imrobz-CIiDUvo6lXRNm
+				http://ctrlartcreate.tumblr.com/post/23138873206
+				https://giphy.com/gifs/photoset-swimming-ue3EH6gnKqqyI
+				https://giphy.com/gifs/jellyfish-zBRijVB87w8nu
+				https://giphy.com/gifs/animal-sea-jellyfish-2RUUAMC8IiNeE
+				https://giphy.com/gifs/jellyfish-psychedelia-illumination-NiWFXUfU5DvzO
+				https://giphy.com/gifs/jellyfish-CgSCVeIHrFt6g
+				https://giphy.com/gifs/jellyfish-MNmBM1RvSn9q8
+				https://giphy.com/gifs/photography-jellyfish-3Rfn9VgtrW7Wo
+				https://giphy.com/gifs/ocean-underwater-GSuTEhxARlKXm
+				https://giphy.com/gifs/jellyfish-feather-103Pcggpa4EMKs
+				https://giphy.com/gifs/animal-sea-jellyfish-1a3yyJZME1Tgc
+				https://giphy.com/gifs/jellyfish-imrobz-1ps3qKAlTiH8A
+				https://giphy.com/gifs/psychedelic-endless-4GVLxVJ7EVIbe
+				https://giphy.com/gifs/ocean-yellow-DmkosfoEMqYmc
+				https://giphy.com/gifs/lion-giant-mane-WDbPEY0DFmwz6
+				https://giphy.com/gifs/cnidaria-FT3N4AKTPjJNS
+				https://giphy.com/gifs/sea-pastel-jellyfish-MfrWdCDJZ7rMY
+				https://giphy.com/gifs/jellyfish-5zVTiFcfNYdck
+				https://giphy.com/gifs/swimming-moving-3i5zFoPAVpwqI
+				https://giphy.com/gifs/animal-ZRGidvLXkvHd6
+
+		-->
+		<style type="text/css">
+			html, body {
+				height: 100vh; padding: 0; margin: 0;
+			}
+			html {
+				background-image: url( "wallpaper.jpg" );
+				background-size: cover;
+			}
+			.container {
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: space-evenly;
+				max-height: 95vh;
+				padding-top: 5vh;
+				overflow: hidden;
+			}
+			img {
+				height: 100px;
+				width: 100px;
+				flex: 0 1 auto;
+			}
+			@media all and ( max-width: 800px ) and ( min-width: 600px ) {
+				img {
+					height: 75px;
+					width: 75px;
+				}
+			}
+			@media all and ( max-width: 600px ) and ( min-width: 300px ) {
+				img {
+					height: 50px;
+					width: 50px;
+				}
+			}
+			@media all and ( max-width: 300px ) {
+				img {
+					height: 25px;
+					width: 25px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<audio autoplay loop>
+			<source src="peanutbutterjellytime.mp3" type="audio/mpeg">
+			<!--[if lt IE 9]>
+				<bgsound src="peanutbutterjellytime.mp3" loop="1">
+			<![endif]-->
+		</audio>
+
+		<div id="container" class="container">
+		</div>
+
+		<script type="text/javascript">
+			var banana = document.createElement( 'img' );
+			banana.setAttribute( 'src', "banana.gif" );
+			var numJellies = 22;
+
+			for( var i=1; i < 10; i++ ) {
+				for( var j=1; j <= numJellies; j++ ) {
+					var img = document.createElement( 'img' );
+					img.setAttribute( 'src', "jelly"+j+".gif" );
+					document.getElementById( 'container' ).appendChild( img );
+
+					// don't insert banana on the last one (bananas go between jellies)
+					if ( j != numJellies ) {
+						document.getElementById( 'container' ).appendChild( banana.cloneNode() );
+					}
+				}
+				if ( i < 2 ) {
+					document.getElementById( 'container' ).appendChild( banana.cloneNode() );
+				}
+			}
+
+		</script>
+	</body>
+</html>
