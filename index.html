@@ -76,7 +76,7 @@
 		</style>
 	</head>
 	<body>
-		<audio autoplay loop>
+		<audio autoplay loop id="music">
 			<source src="peanutbutterjellyfish.mp3" type="audio/mpeg">
 			<!--[if lt IE 9]>
 				<bgsound src="peanutbutterjellyfish.mp3" loop="1">
@@ -105,6 +105,12 @@
 				if ( i < 2 ) {
 					document.getElementById( 'container' ).appendChild( banana.cloneNode() );
 				}
+			}
+
+			document.addEventListener('click', musicPlay);
+				function musicPlay() {
+					document.getElementById('music').play();
+					document.removeEventListener('click', musicPlay);
 			}
 
 		</script>
